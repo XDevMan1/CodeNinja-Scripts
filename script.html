@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CN | Home</title>
+  <link rel="stylesheet" href="script.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .btn {
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="left-page">
+      <a class="links" href="index.html"><i class="fas fa-home"></i> Home</a>
+    </div>
+    <div class="right-page">
+      <a class="links" href="script.html"><i class="fas fa-file-code"></i> Scripts</a>
+      <a class="links" href="key.html"><i class="fas fa-key"></i> GetKey</a>
+      <a class="links" href="#credits"><i class="fas fa-award"></i> Credits</a>
+    </div>
+  </nav>
+  <h3>Just click the button to copy the scripts</h3>
+
+  <button id="btn1" class="btn links" onclick="soon('')">Speed | Jump Gui</button>
+  <button id="btn2" class="btn links" onclick="soon('')">Fly Gui</button>
+  <button id="btn3" class="btn links" onclick="soon('')">Invisible</button> 
+  <button id="btn4" class="btn links" onclick="soon('')">SystemBroken</button>
+  <script>
+    function copyToClipboardFromFile(file) {
+      fetch(file)
+        .then(response => response.text())
+        .then(text => {
+          text = text.replace(/[^\x00-\x7F]/g, ""); 
+
+          navigator.clipboard.writeText(text)
+            .then(() => {
+              alert('The script has been copied.');
+            })
+            .catch(err => {
+              console.error('Failed to copy: ', err);
+            });
+        })
+        .catch(err => {
+          console.error('Failed to fetch file: ', err);
+        });
+    }
+
+    function soon() {
+      alert("This script is coming soon");
+    }
+  </script>
+</body>
+</html>
