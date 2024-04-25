@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Oswald:wght@500&display=swap');
+
+body {
+  color: white;
+  background-color: #1E2F51;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #8A2BE2;
+  overflow: hidden;
+  height: 10%;
+  border: none;
+  border-radius: 8px;
+  animation: slideDown 0.5s;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.left-page{
+  flex:1 1 200px;
+}
+
+.links {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+  font-family: Lexend;
+  font-size: 25px;
+  transition: color 0.3s;
+}
+
+.links:hover {
+  color: #b3b9e4;
+}
+
+h1 {
+  text-align: center; 
+  margin-top: 290px; 
+  margin-left: 25px; 
+  margin-right: 19px; 
+  font-size: 40px; 
+}
+
+h1 {
+  color: #ADD8E6;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 19px;
+  font-size: 25px;
+}
+
+h3 {
+  color: #b3b9e4;
+}
