@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodeNinja Key System</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <style>
+    body {
+      background: radial-gradient(circle, white, grey);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .key-button, .discord-button, .script-button {
+      background-color: #363636;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .key-button:hover, .discord-button:hover, .script-button:hover {
+      background-color: #2980b9;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Code Ninja Key</h1>
+    <button class="key-button" onclick="getKey()">Get key!</button>
+    <a href="index.html" class="script-button">Get scripts</a>
+    <br>
+    <button class="key-button" onclick="soon()">Join our server</button>
+  </div>
+  
+  <script>
+    function getKey() {
+      var key = "CodeNinjaTheBest";
+      alert("Here is your key: " + key);
+    }
+    
+    function soon() {
+        alert("Discord server coming soon")
+    }
+  </script>
+</body>
+</html>
